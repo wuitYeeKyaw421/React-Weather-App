@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .CONTAINER {
+    @apply text-white w-full h-full min-h-screen relative bg-[#00000033] font-sans;
+  }
+
+  .CONTAINER_BEFORE {
+    @apply before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-[-1];
+  }
+}
+
+.CONTAINER_BEFORE::before {
+  background: url("assets/weatherBGImage.jpg") no-repeat center center/cover;
+}
